@@ -13,17 +13,18 @@ def main():
 @app.route("/google")
 def google():
   return flask.redirect("https://google.com")
-
+# this function takes it to template.html file
 @app.route("/template")
 def template():
   x = 3
   return flask.render_template("template.html", x=x)
-
+#this function gives it variable input
 @app.route("/variable/(var)")
 def variable(var):
   return "The\"secret\"variable is{}".format(var)
-
+#this function takes it to squalculator.html file
 @app.route("/squalculator",methods=["GET", "POST"])
+#this is used for calculation
 def calculator():
   if flask.request.method == "GET":
     return flask.render_template("squalculator.html", result="na")
