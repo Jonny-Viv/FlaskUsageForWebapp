@@ -1,0 +1,23 @@
+<h1>Hello Template!</h1>
+
+<p>This is a paragraph...</p>
+
+<ul>
+  <li>Flour</li>
+  <li>Eggs</li>
+  <li>Gravy</li>
+</ul>
+
+
+<p>The test variable passed from Python is {{ x }}.</p>
+
+{% if x > 4 %}
+   <p>and it's greater than 4!
+{% else %}
+   <p>and it's less than or equal to 4!</p>
+{% endif %}
+
+<ol>
+{% for i in range(4) %}
+  <li>The item is {{}}</li>
+</ol>

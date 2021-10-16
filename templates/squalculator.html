@@ -1,0 +1,12 @@
+<h1>Welcome to the Squalculator</h1>
+<form method="POST" action="">
+  <input type="text" name="input">
+  <input type="submit">
+</form>
+{% if result == "na" %}
+  <p>Please enter a value into the squalculator...</p>
+{% elif result == "error" %}
+  <p>Please enter a valid number!</p>
+{% else %}
+  <p>The square of your number is{{ result }}.</p>
+{% endif %}  
